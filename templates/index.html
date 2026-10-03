@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+</head>
+<body>
+    <h1>Library Management System</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Book Name</th>
+                <th>Book ID</th>
+                <th>Author</th>
+                <th>Status</th>
+                <th>Card ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in records %}
+            <tr>
+                <td>{{ record.BK_NAME }}</td>
+                <td>{{ record.BK_ID }}</td>
+                <td>{{ record.AUTHOR_NAME }}</td>
+                <td>{{ record.BK_STATUS }}</td>
+                <td>{{ record.CARD_ID }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <form method="POST" action="/add">
+        <input type="text" name="bk_name" placeholder="Book Name" required>
+        <input type="text" name="bk_id" placeholder="Book ID" required>
+        <input type="text" name="author_name" placeholder="Author Name" required>
+        <select name="bk_status">
+            <option value="Available">Available</option>
+            <option value="Issued">Issued</option>
+        </select>
+        <input type="text" name="card_id" placeholder="Card ID (if issued)">
+        <button type="submit">Add Record</button>
+    </form>
+</body>
+</html>
