@@ -19,7 +19,7 @@ A simple Library Management System built with Python and Tkinter, using SQLite f
 
 1. Clone the repository to your local machine:
    ```bash
-   git clone https://github.com/shiva0909122/Library-Management-System.git
+   git clone https://github.com/naitik0/Library-Management-System.git
    ```
 
 2. Change directory to the project folder:
@@ -27,16 +27,14 @@ A simple Library Management System built with Python and Tkinter, using SQLite f
    cd Library-Management-System
    ```
 
-3. Ensure you have Python installed on your machine. If not, download and install it from [python.org](https://www.python.org/).
+3. Make sure Python 3 is installed ([python.org](https://www.python.org/)). The app only uses the
+   standard library (Tkinter + SQLite), so there's nothing to `pip install`. On Linux you may
+   need the Tkinter package:
+   ```bash
+   sudo apt-get install python3-tk
+   ```
 
-4. Install Tkinter (if not already installed with Python):
-   - On Windows, Tkinter is usually included with Python by default.
-   - On Linux, you can install Tkinter using:
-     ```bash
-     sudo apt-get install python3-tk
-     ```
-
-5. Run the Python script:
+4. Run the app:
    ```bash
    python app.py
    ```
